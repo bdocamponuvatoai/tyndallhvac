@@ -163,4 +163,31 @@ is a no-op on Linux/macOS.
 
 ### Deployment
 
-Not deployed yet.
+**Preview URL:** not deployed yet. Add it here after the first deploy.
+
+First deploy, from the Vercel dashboard:
+
+1. Go to <https://vercel.com/new>, choose **Import Git Repository** and pick
+   `bdocamponuvatoai/tyndallhvac`. Grant the Vercel GitHub app access to the
+   repo if it isn't listed.
+2. Leave the detected settings as they are: Framework preset **Next.js**, root
+   directory `./`, default build and install commands. The static export
+   (`out/`) is detected from `output: "export"`; don't override the output
+   directory.
+3. Environment variables: add `SITE_INDEXABLE` = `false` for **Preview** and
+   **Production**. Leave `SITE_URL` unset for now: canonical URLs fall back to
+   the project's `*.vercel.app` production domain.
+4. Click **Deploy**. Pushes to `main` deploy to production, and pull requests
+   get preview deployments. Vercel protects preview URLs with Vercel
+   Authentication by default; the production `*.vercel.app` URL is public.
+
+Launch (only after the owner approves the content):
+
+1. **Settings → Domains**: add the custom domain and follow the DNS
+   instructions.
+2. **Settings → Environment Variables (Production)**: set `SITE_URL` to
+   `https://<domain>`, then set `SITE_INDEXABLE` to `true`.
+3. Redeploy production. Check that `/robots.txt` allows crawling and lists the
+   sitemap, and that page canonicals use the new domain.
+4. Submit `https://<domain>/sitemap.xml` in Google Search Console, and run
+   Lighthouse on the live site.

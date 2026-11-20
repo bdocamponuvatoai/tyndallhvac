@@ -1,0 +1,36 @@
+.legal {
+  max-width: 850px;
+  padding-block: 80px 100px;
+}
+.legal h1 {
+  font-size: 3.75rem;
+  margin-bottom: 35px;
+}
+.legal h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-top: 35px;
+  margin-bottom: 17px;
+}
+.legal p {
+  line-height: 1.8;
+}
+.legal a {
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .legal h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 560px) {
+  .legal {
+    padding-block: 50px 70px;
+  }
+  .legal h1 {
+    font-size: 2.75rem;
+  }
+  .legal h2 {
+    font-size: 1.6rem;
+  }
+}

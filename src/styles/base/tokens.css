@@ -1,0 +1,11 @@
+:root {
+  --ink: #14232d;
+  --muted: #65727b;
+  --blue: #155edf;
+  --blue-dark: #1049b2;
+  --night: #0c1c28;
+  --line: #dce3e7;
+  --pale: #f3f6f8;
+  /* System font stack: the site ships no web fonts. */
+  --font: Arial, Helvetica, sans-serif;
+}

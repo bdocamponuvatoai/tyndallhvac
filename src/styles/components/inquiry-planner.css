@@ -1,0 +1,226 @@
+.inquiry {
+  padding: 35px 40px 30px;
+  border-radius: 18px;
+  background: var(--pale);
+  border: 1px solid #e2e9ed;
+}
+.planner-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 38px;
+  color: #647887;
+  font-size: 0.875rem;
+}
+.planner-steps > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.planner-steps b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dce5eb;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.planner-steps .active {
+  color: var(--blue);
+  font-weight: 600;
+}
+.planner-steps .active b,
+.planner-steps .complete b {
+  background: var(--blue);
+  color: white;
+}
+.inquiry h2 {
+  font-size: 1.9rem;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+.inquiry h2:focus {
+  outline: 0;
+}
+.planner-intro {
+  margin-top: 13px;
+  margin-bottom: 26px;
+  font-size: 1rem;
+}
+.inquiry form > label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.inquiry label > span {
+  font-weight: 400;
+  color: var(--muted);
+}
+.inquiry input:not([type="radio"]),
+.inquiry select,
+.inquiry textarea {
+  display: block;
+  background: white;
+  border: 1px solid #c8d4dd;
+  width: 100%;
+  padding: 13px 14px;
+  margin-top: 8px;
+  border-radius: 7px;
+  color: var(--ink);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.inquiry select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23526777' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  padding-right: 42px;
+}
+.inquiry textarea {
+  resize: vertical;
+}
+.inquiry fieldset {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+.inquiry legend {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.radio-options {
+  display: flex;
+  gap: 12px;
+}
+.radio-options label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #c8d4dd;
+  border-radius: 7px;
+  padding: 12px 18px;
+  background: white;
+  width: 50%;
+  font-size: 0.9375rem;
+}
+.radio-options label:has(input:checked) {
+  border-color: var(--blue);
+  background: #edf5ff;
+}
+.radio-options input {
+  accent-color: var(--blue);
+  width: 16px;
+  height: 16px;
+}
+.planner-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+.form-disclosure {
+  padding-top: 23px;
+  margin-top: 27px;
+  border-top: 1px solid #d8e1e7;
+  font-size: 0.8125rem;
+  color: #667780;
+  line-height: 1.65;
+}
+.planner-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.inquiry-summary {
+  margin: 0 0 25px;
+}
+.inquiry-summary > div {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid #d8e1e7;
+  font-size: 0.9375rem;
+}
+.inquiry-summary dt {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+.inquiry-summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.review-tools {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 17px;
+  flex-wrap: wrap;
+}
+.review-tools button {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid #a8b7c1;
+  background: none;
+  padding: 8px 0;
+  color: var(--ink);
+}
+.review-tools button,
+.planner-call {
+  font-size: 0.875rem;
+}
+@media (max-width: 1100px) {
+  .inquiry {
+    padding: 30px;
+  }
+  .planner-steps {
+    gap: 5px;
+  }
+}
+@media (max-width: 560px) {
+  .inquiry {
+    padding: 25px 20px;
+    border-radius: 14px;
+  }
+  .planner-steps {
+    gap: 6px;
+    margin-bottom: 30px;
+    font-size: 0.75rem;
+  }
+  .planner-steps > span {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .planner-steps b {
+    width: 25px;
+    height: 25px;
+  }
+  .inquiry h2 {
+    font-size: 1.75rem;
+  }
+  .inquiry-summary > div {
+    grid-template-columns: 65px 1fr;
+    gap: 10px;
+  }
+  .form-disclosure {
+    font-size: 0.75rem;
+  }
+  .planner-call {
+    gap: 6px;
+  }
+}

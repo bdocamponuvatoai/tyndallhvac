@@ -1,0 +1,17 @@
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  color: var(--blue);
+  margin-bottom: 25px;
+}
+.muted {
+  color: #7d8a92;
+}
+.small-note {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 20px;
+}

@@ -1,0 +1,28 @@
+.areas-full {
+  padding-block: 80px 100px;
+  max-width: 1000px;
+}
+.areas-full .city-list {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 25px;
+}
+.areas-full .city-list a {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.areas-full .search-input {
+  max-width: 600px;
+}
+@media (max-width: 800px) {
+  .areas-full .city-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .areas-full {
+    padding-block: 50px 70px;
+  }
+  .areas-full .city-list {
+    gap: 0 20px;
+  }
+}

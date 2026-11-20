@@ -1,0 +1,39 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #163348;
+  line-height: 1;
+}
+.brand > svg {
+  width: 38px;
+  height: 38px;
+}
+.brand > span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+}
+.brand small {
+  display: block;
+  line-height: 1;
+  letter-spacing: 0.27em;
+  margin-top: 7px;
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+.brand-light {
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .brand > svg {
+    width: 32px;
+    height: 32px;
+  }
+  .brand > span {
+    font-size: 1.3rem;
+  }
+  .brand small {
+    margin-top: 6px;
+  }
+}

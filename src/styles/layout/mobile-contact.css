@@ -1,0 +1,33 @@
+.mobile-contact {
+  display: none;
+}
+@media (max-width: 560px) {
+  .mobile-contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 35;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    background: #ffffffed;
+    backdrop-filter: blur(12px);
+    padding: 10px 15px calc(10px + env(safe-area-inset-bottom));
+    gap: 10px;
+    border-top: 1px solid #d9e3e9;
+  }
+  .mobile-contact a {
+    min-height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .mobile-contact a:last-child {
+    background: var(--blue);
+    color: #fff;
+    border-radius: 7px;
+  }
+}

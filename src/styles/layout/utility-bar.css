@@ -1,0 +1,28 @@
+.utility {
+  background: var(--pale);
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+.utility .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 34px;
+  color: #576570;
+}
+.utility b {
+  margin-left: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+@media (max-width: 800px) {
+  .utility .container {
+    justify-content: center;
+  }
+  .utility .container > span {
+    display: none;
+  }
+  .utility .container > a {
+    font-size: 0.75rem;
+  }
+}

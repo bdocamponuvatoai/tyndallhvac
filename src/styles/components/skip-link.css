@@ -1,0 +1,12 @@
+.skip {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 12px 20px;
+  background: #fff;
+  z-index: 100;
+  transform: translateY(-200%);
+}
+.skip:focus {
+  transform: none;
+}

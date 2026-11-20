@@ -1,0 +1,50 @@
+.trust-band {
+  border-bottom: 1px solid var(--line);
+}
+.trust-band > .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 24px;
+}
+.trust-band span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #475a67;
+}
+.trust-band svg {
+  color: var(--blue);
+}
+@media (max-width: 800px) {
+  .trust-band > .container {
+    padding-block: 21px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 30px;
+  }
+  .trust-band span {
+    font-size: 0.8125rem;
+  }
+  .trust-band span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .trust-band > .container {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .trust-band span {
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+  .trust-band svg {
+    width: 16px;
+    height: 16px;
+  }
+  .trust-band span:nth-child(2) {
+    display: none;
+  }
+}

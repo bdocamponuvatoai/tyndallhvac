@@ -13,7 +13,7 @@ export function SiteFooter() {
     <footer>
       <div className="container footer-top">
         <div className="footer-brand">
-          <Link href="/" aria-label="Tyndall HVAC home">
+          <Link href="/" aria-label="Tyndall Heating &amp; Air home">
             <Brand light />
           </Link>
           <p>

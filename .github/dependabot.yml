@@ -4,6 +4,16 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # Majors the Next.js 16 toolchain does not support yet: create-next-app
+      # pins TypeScript 5 and ESLint 9, and @types/node follows the Node.js
+      # floor in package.json "engines". Minor and patch updates still apply.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
     groups:
       next-react:
         patterns:

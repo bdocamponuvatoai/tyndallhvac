@@ -40,7 +40,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container nav-inner">
-        <Link href="/" aria-label="Tyndall HVAC home">
+        <Link href="/" aria-label="Tyndall Heating &amp; Air home">
           <Brand />
         </Link>
         <nav

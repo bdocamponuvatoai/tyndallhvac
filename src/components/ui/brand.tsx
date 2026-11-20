@@ -10,8 +10,11 @@ export function Brand({ light = false }: { light?: boolean }) {
         <path d="M29 19l7 4-7 4z" fill="#53b7f5" />
         <path d="M11 19l-7 4 7 4z" fill="#53b7f5" />
       </svg>
+      {/* The space keeps "TYNDALL HEATING & AIR" as separate words for assistive
+          tech; it collapses at the end of the line, so nothing moves visually. */}
       <span>
-        TYNDALL<small>HEATING &amp; AIR</small>
+        {"TYNDALL "}
+        <small>HEATING &amp; AIR</small>
       </span>
     </span>
   );

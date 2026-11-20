@@ -193,9 +193,44 @@ The AI-photo labels and the "inquiries open your email app" note were kept.
 - **Behaviour and navigation re-run:** the same results as sections 4 and 5.
   The form screenshots are about 21 px shorter (one sentence removed).
 
+## 8. Lighthouse (local production build)
+
+Lighthouse 13.6.0, default mobile preset: a 412×823 viewport at DPR 1.75,
+simulated slow 4G (150 ms RTT, about 1.6 Mbps) and 4× CPU slowdown. There were
+3 runs per page. The site was served from `out/` by `serve@14` (gzip) on the
+local machine. **This is not the live site.** Re-measure on the deployed URL.
+
+| Page        | Performance | Accessibility | Best practices | SEO\* | LCP       | CLS | Page weight |
+| ----------- | ----------- | ------------- | -------------- | ----- | --------- | --- | ----------- |
+| `/`         | 80–82       | 96            | 100            | 69    | 4.6–4.7 s | 0   | 1,038 KiB   |
+| `/contact/` | 93–99       | 96            | 100            | 66    | 0.8–2.2 s | 0   | 183 KiB     |
+
+\* SEO is low on purpose. The preview is `noindex` and `robots.txt` blocks
+crawling until the owner approves the launch; Lighthouse's "is-crawlable" audit
+fails until then.
+
+**What holds the scores back:**
+
+- **Home LCP.** The LCP is the hero photo. At the emulated device's 721 px need,
+  the browser picks the 1600 px file (262 KiB), because the next size down is
+  640 px. Fix: add an intermediate (~1080 px) variant. It is not done, because
+  it changes which file renders at some widths.
+- **Home page weight.** About 850 KiB of the 1,038 KiB is three photos.
+- **Accessibility 96.** This is colour contrast, which is a design change and
+  needs owner approval:
+  - CTA band: light-blue text on brand blue, 3.99–4.32:1;
+  - contact form: two 12 px grey labels on pale grey, 4.22–4.28:1;
+  - the target is 4.5:1.
+
+**Fixed after the first audit:** the logo links' accessible name ("Tyndall
+HVAC home") did not contain the visible text. They are now "Tyndall Heating &
+Air home", with a collapsing space between "TYNDALL" and "HEATING & AIR".
+Lighthouse `label-content-name-mismatch` now passes. A pixel check against the
+previous build showed 84/84 identical (2 retakes).
+
 ## Known gaps
 
 - No physical iPhone or Android devices, and no Safari or Firefox. All phone
   results come from Chrome at phone widths.
-- Lighthouse is recorded separately (see README, Deployment), measured on the
-  deployed URL once it exists.
+- Lighthouse has only been measured locally so far (section 8). Live numbers
+  are added once the site is deployed.
